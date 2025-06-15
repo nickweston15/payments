@@ -6,15 +6,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Let's Build Something Cool</h1>
+        <h1>Payments Playground</h1>
       </header>
       <main className="App-main">
         <section>
-          <h2>REST API Example: Get message from backend Node.js server</h2>
+          <h2>Checkout Simulator</h2>
           <ServerButton />
         </section>
         <section>
-          <h2>Webhook & Cloud Example: Upload a File to an AWS S3 bucket</h2>
+          <h2>Not sure if I'll use this</h2>
           <FileUpload />
         </section>
       </main>
