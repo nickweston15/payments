@@ -1,6 +1,7 @@
 import './assets/App.css';
-import ServerButton from './components/ServerButton.js';
-import FileUpload from './components/FileUpload.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CheckoutPage from './CheckoutPage'
+import Dashboard from './Dashboard'
 
 function App() {
   return (
@@ -9,14 +10,12 @@ function App() {
         <h1>Payments Playground</h1>
       </header>
       <main className="App-main">
-        <section>
-          <h2>Checkout Simulator</h2>
-          <ServerButton />
-        </section>
-        <section>
-          <h2>Not sure if I'll use this</h2>
-          <FileUpload />
-        </section>
+        <Router>
+          <Routes>
+            <Route path="/" element={<CheckoutPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </Router>
       </main>
       <footer className="App-footer">
         <p>Built by Nick Weston, 2025 &reg;</p>
