@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Payments Playground</h1>
+        <h1>Stripe Payments Simulator</h1>
       </header>
       <main className="App-main">
         <Router>

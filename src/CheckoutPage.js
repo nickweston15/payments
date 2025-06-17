@@ -15,26 +15,51 @@ function CheckoutPage() {
   };
 
   return (
-    <div className="checkout-form">
-      <label>Amount:</label>
-      <input 
-        type="number" 
-        value={amount} 
-        onChange={(e) => setAmount(e.target.value)} 
-        placeholder="Enter amount in cents"
-      />
+    <div className="checkout-form" style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: '15px', 
+      maxWidth: '400px', 
+      margin: '0 auto', 
+      padding: '20px' 
+    }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+        <label>Amount:</label>
+        <input 
+          type="number" 
+          value={amount} 
+          onChange={(e) => setAmount(e.target.value)} 
+          placeholder="Enter amount in cents"
+          style={{ padding: '8px', fontSize: '16px' }}
+        />
+      </div>
 
-      <label>Currency:</label>
-      <select 
-        value={currency} 
-        onChange={(e) => setCurrency(e.target.value)}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+        <label>Currency:</label>
+        <select 
+          value={currency} 
+          onChange={(e) => setCurrency(e.target.value)}
+          style={{ padding: '8px', fontSize: '16px' }}
+        >
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+          <option value="gbp">GBP</option>
+        </select>
+      </div>
+
+      <button 
+        onClick={handleCheckout}
+        style={{ 
+          padding: '12px', 
+          fontSize: '16px', 
+          backgroundColor: '#007bff', 
+          color: 'white', 
+          border: 'none', 
+          borderRadius: '4px', 
+          cursor: 'pointer',
+          marginTop: '10px'
+        }}
       >
-        <option value="usd">USD</option>
-        <option value="eur">EUR</option>
-        <option value="gbp">GBP</option>
-      </select>
-
-      <button onClick={handleCheckout}>
         Pay Now
       </button>
     </div>
